@@ -1,7 +1,8 @@
-const Fruit = require('./Fruit')
-const User = require('./User')
+const Fruit = require("./Fruit");
+const User = require("./User");
 
-module.exports = { 
-    Fruit, 
-    User 
+// Am I not supposed to create the associations?
+module.exports = {
+  Fruit,
+  User,
 };
