@@ -2,12 +2,12 @@ const express = require("express");
 const User = require("../models/User");
 const router = express.Router();
 
-router.get("/", (req, res) => {
-  res.json(req.body);
+router.get("/", async (req, res) => {
+  // res.json(req.body);
   // OR:
-  //   const users = await Users.findAll({})
-  //   res.json(users)
-  //   add async in at top
+  const users = await User.findAll({});
+  res.json(users);
+  // add async in at top
 });
 
 router.get("/:id", async (req, res) => {
